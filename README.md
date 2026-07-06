@@ -1,15 +1,26 @@
-# Tauri + Vanilla
+# 💧 Liquid Terminal for Linux Mint
 
-Как уставновить:
-  npm install
-  npm run tauri build
-  После выполнения в директории src-tauri/target/release/bundle/deb появится liquid-terminal_0.1.0_amd64.deb
-  Можете перетащить его куда удобно или же там же запустить установщик.
-  Терминал готов, можете заменить стандартный терминал этим или же использовать его как дополнительный.
+Красивый и современный эмулятор терминала с эффектом "жидкого стекла", построенный на базе **Tauri**, **Vite** (Vanilla JS) и **Three.js**.
 
+---
 
-This template should help get you started developing with Tauri in vanilla HTML, CSS and Javascript.
+## 🚀 Установка и сборка
 
-## Recommended IDE Setup
+Для того чтобы собрать проект из исходников и установить его в систему, выполните следующие шаги:
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+1. **Установите зависимости проекта:**
+   ```bash
+   npm install
+
+2. **Запустите сборку production-версии:**
+   ```bash
+   npm run tauri build
+
+3. **Установка .deb пакета:**
+   После успешного завершения сборки готовый установочный пакет появится по пути:
+   ```txt
+   src-tauri/target/release/bundle/deb/liquid-terminal_0.1.0_amd64.deb
+
+  Вы можете перетащить этот файл в любое удобное место или запустить установщик прямо из этой директории.
+
+  **💡 Готово! Теперь вы можете использовать Liquid Terminal как дополнительный эмулятор или полностью заменить им стандартный терминал Linux Mint.**
