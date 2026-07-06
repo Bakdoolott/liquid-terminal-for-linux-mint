@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="vendor/xterm.css"/>
+	<link rel="stylesheet" href="styles.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Liquid Terminal</title>
+</head>
+<body>
+<div id="window-container">
+	<div id="custom-titlebar">
+		<div class="titlebar-info">
+			<span class="terminal-icon">💻</span>
+			<span class="terminal-title">Liquid Terminal</span>
+		</div>
+		<div class="titlebar-controls">
+			<button class="titlebar-btn" id="titlebar-minimize">─</button>
+			<button class="titlebar-btn" id="titlebar-maximize">🗖</button>
+			<button class="titlebar-btn id-close" id="titlebar-close">✕</button>
+		</div>
+	</div>
+	<div id="terminal-container"></div>
+</div>
+
+<script src="vendor/xterm.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

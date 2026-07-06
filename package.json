@@ -1,0 +1,17 @@
+{
+  "name": "liquid-terminal",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "tauri": "tauri"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  },
+  "dependencies": {
+    "@xterm/xterm": "^6.0.0",
+    "three": "^0.185.1",
+    "xterm-addon-fit": "^0.8.0"
+  }
+}

@@ -1,0 +1,16 @@
+# Rust / Cargo build output
+/target/
+
+# Tauri generated files
+/gen/schemas/
+
+# Local logs and crash dumps
+*.log
+*.dmp
+*.tmp
+
+# OS/editor noise inside src-tauri
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

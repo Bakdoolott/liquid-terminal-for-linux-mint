@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: transparent !important;
+}
+
+/* Общий контейнер: Эффект массивного, толстого стекла */
+#window-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    backdrop-filter: blur(24px) saturate(145%);
+    -webkit-backdrop-filter: blur(24px) saturate(145%);
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.18),
+        rgba(12, 18, 24, 0.12) 42%,
+        rgba(0, 0, 0, 0.08)
+    );
+
+    /* Скругления */
+    border-radius: 12px;
+
+    /* Аккуратная фаска */
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+
+    /* Объемные тени */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.38),
+    inset 0 2px 4px rgba(255, 255, 255, 0.4),
+    inset 0 0 20px rgba(255, 255, 255, 0.08),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.18);
+
+    overflow: hidden;
+}
+
+/* ШАПКА ДЛЯ ТОЛСТОГО СТЕКЛА */
+#custom-titlebar {
+    flex: 0 0 40px;
+    height: 40px;
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.02);
+    /* Глянцевая разделительная полоса между шапкой и терминалом */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    user-select: none;
+}
+
+.titlebar-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 13px;
+    font-family: sans-serif;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.titlebar-controls {
+    display: flex;
+    gap: 5px;
+}
+
+/* Кнопки управления окном */
+.titlebar-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    transition: all 0.15s ease;
+}
+
+.titlebar-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.titlebar-btn.id-close:hover {
+    background: rgba(239, 68, 68, 0.85);
+}
+
+/* КОНТЕЙНЕР ТЕРМИНАЛА */
+#terminal-container {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    padding: 12px 18px 18px 18px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.xterm {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.xterm,
+.xterm-viewport,
+.xterm-screen,
+.xterm-screen canvas,
+.xterm-decoration-container,
+.xterm-helpers {
+    background: transparent !important;
+}
